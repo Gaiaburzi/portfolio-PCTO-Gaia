@@ -103,7 +103,7 @@ h3 { font-size: 2rem; margin-bottom: 15px; color: #64ffda; }
 }
 
 /* Collegamento file immagini (Sostituisci i nomi con le tue foto caricate nella stessa cartella) */
-.foto-nuoto { background-image: url('nuoto.jpg'); }
+.foto-nuoto { background-image: url('nuoto.JPG'); }
 .foto-istruttrice { background-image: url('foto-bambino.jpg'); }
 .foto-codice { background-image: url('algoritmo.jpg'); }
 
