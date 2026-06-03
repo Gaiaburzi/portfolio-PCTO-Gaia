@@ -17,7 +17,7 @@ body {
 position: relative;
 width: 100%;
 height: 100vh; /* Copre il 100% dell'altezza dello schermo dello smartphone o PC */
-background-image: url('nuoto.JPG'); /* <-- SE VUOI CAMBIARE FOTO, METTI IL NOME ESATTO QUI */
+background-image: url('sfondo.jpg'); /* <-- SE VUOI CAMBIARE FOTO, METTI IL NOME ESATTO QUI */
 background-size: cover;
 background-position: center;
 display: flex;
