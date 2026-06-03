@@ -40,7 +40,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-image: url('nuoto.JPG'); /* Assicurati che il nome sia identico */
+background-image: url('sfondo.jpg'); /* Assicurati che il nome sia identico */
 background-size: cover;
 background-position: center;
 filter: blur(8px); /* <-- REGOLA QUI LA SFOCATURA (più alto è il numero, più sfoca) */
