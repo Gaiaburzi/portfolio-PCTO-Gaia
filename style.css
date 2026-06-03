@@ -43,7 +43,7 @@ height: 100%;
 background-image: url('sfondo.jpg'); /* Assicurati che il nome sia identico */
 background-size: cover;
 background-position: center;
-filter: blur(8px); /* <-- REGOLA QUI LA SFOCATURA (più alto è il numero, più sfoca) */
+filter: blur(3px); /* <-- REGOLA QUI LA SFOCATURA (più alto è il numero, più sfoca) */
 transform: scale(1.05); /* Evita che si vedano i bordi bianchi a causa del blur */
 z-index: 1;
 }
