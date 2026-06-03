@@ -15,59 +15,87 @@ body {
 }
 .hero-section {
 position: relative;
-width: 100%;
-height: 100vh; /* Copre il 100% dell'altezza dello schermo dello smartphone o PC */
-background-image: url('sfondo.jpg'); /* <-- SE VUOI CAMBIARE FOTO, METTI IL NOME ESATTO QUI */
-background-size: cover;
-background-position: center;
+width: 100vw; /* Forza la larghezza a coprire TUTTO lo schermo da lato a lato */
+height: 100vh; /* Forza l'altezza a coprire TUTTO lo schermo da cima a fondo */
+left: 50%; /* Trucco CSS per rompere eventuali contenitori stretti */
+right: 50%;
+margin-left: -50vw;
+margin-right: -50vw;
 display: flex;
 align-items: center;
-justify-content: flex-start;
-padding-left: 10%; /* Sposta il testo leggermente a sinistra come nell'esempio */
+justify-content: center; /* Centra il testo sullo schermo */
+text-align: center;
+overflow: hidden;
+
+/* Linea netta sul fondo che separa l'inizio dalla serpentina */
+border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 box-sizing: border-box;
 }
 
-/* Strato scuro sopra la foto per far leggere bene la scritta bianca */
+/* Effetto Sfondo Sfocato (Blur) */
+.hero-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-image: url('nuoto.JPG'); /* Assicurati che il nome sia identico */
+background-size: cover;
+background-position: center;
+filter: blur(8px); /* <-- REGOLA QUI LA SFOCATURA (più alto è il numero, più sfoca) */
+transform: scale(1.05); /* Evita che si vedano i bordi bianchi a causa del blur */
+z-index: 1;
+}
+
+/* Strato scuro per dare contrasto e far risaltare le scritte bianche */
 .hero-overlay {
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(10, 15, 30, 0.95) 100%);
-z-index: 1;
+background: rgba(10, 15, 30, 0.6); /* Scurisce lo sfondo quanto basta */
+z-index: 2;
 }
 
-/* Contenitore dei testi sopra lo sfondo */
+/* Contenitore dei testi (sta sopra lo sfondo e sopra l'overlay scuro) */
 .hero-content {
 position: relative;
-z-index: 2;
-max-width: 600px;
+z-index: 3;
+padding: 20px;
+max-width: 800px;
 }
 
 .hero-subtitle {
-color: #00d4ff; /* Azzurro elettrico */
+color: #00d4ff;
 font-weight: 600;
 letter-spacing: 3px;
-font-size: 0.9rem;
-margin-bottom: 10px;
+font-size: 1rem;
+margin-bottom: 15px;
 text-transform: uppercase;
 }
 
 .hero-title {
 color: #ffffff;
-font-size: 4rem; /* Scritta gigante e d'impatto */
+font-size: 3.5rem;
 font-weight: 800;
-line-height: 1.1;
+line-height: 1.2;
 margin-bottom: 20px;
-letter-spacing: -1px;
+text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra sotto la scritta per massima leggibilità */
 }
 
 .hero-description {
-color: #e0e0e0;
+color: #ffffff;
 font-size: 1.2rem;
 line-height: 1.6;
-opacity: 0.9;
+opacity: 0.95;
+text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Spazio netto per far partire la serpentina subito sotto la linea */
+.timeline-container {
+padding-top: 80px;
 }
 
 /* Modifica leggera per distanziare la serpentina subito sotto la foto iniziale */
