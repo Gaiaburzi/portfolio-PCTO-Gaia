@@ -312,29 +312,33 @@ strong { color: #64ffda; font-weight: 600; }
 /* ==========================================================================
    ICONE STILIZZATE DI FIANCO AI RIQUADRI
    ========================================================================== */
+/* ==========================================================================
+   ICONE STILIZZATE SULLA LINEA CENTRALE (Fix Allineamento)
+   ========================================================================== */
 .disegnino-stilizzato {
     position: absolute;
-    font-size: 3.5rem;
-    top: 35%;
-    opacity: 0.2;
-    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-    pointer-events: none;
-    background: rgba(255, 255, 255, 0.03);
-    width: 80px; height: 80px;
+    font-size: 2.2rem; /* Leggermente più piccole e raffinate per non occupare spazio */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    background: #0f2440;
+    width: 60px; height: 60px;
     display: flex; align-items: center; justify-content: center;
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(100, 255, 218, 0.3);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
 }
 
-.destra .disegnino-stilizzato { left: -40px; transform: translateX(-50%); }
-.sinistra .disegnino-stilizzato { right: -40px; transform: translateX(50%); }
+/* Calcolo esatto per posizionarle millimetricamente sopra la linea centrale */
+.destra .disegnino-stilizzato { left: -55px; }
+.sinistra .disegnino-stilizzato { right: -55px; }
 
-/* Accensione elementi con lo scroll (Interazione fluida) */
 .timeline-item.visible .disegnino-stilizzato {
-    opacity: 1;
-    background: rgba(100, 255, 218, 0.1);
-    border-color: rgba(100, 255, 218, 0.4);
-    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    border-color: #64ffda;
+    background: #112240;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
 }
 
 /* ==========================================================================
