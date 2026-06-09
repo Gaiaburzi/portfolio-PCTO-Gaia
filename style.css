@@ -1,6 +1,4 @@
-/* ==========================================================================
-   RESET E BASE ESTETICA (Cyberpunk Minimal Premium)
-   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,18 +8,14 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #ffffff;
-    /* Sfumatura continua profonda ed elegante ispirata al look premium */
     background: linear-gradient(180deg, #07111e 0%, #0a192f 30%, #0f2440 65%, #0a1424 100%);
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   HERO SEZIONE INIZIALE (Fix Sovrapposizioni e Più Respiro)
-   ========================================================================== */
 .hero-section {
     position: relative;
     width: 100%;
-    min-height: 100vh; /* Garantisce lo spazio intero dello schermo senza schiacciare i testi */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,13 +45,11 @@ body {
     flex-grow: 1;
 }
 
-/* Header Principale */
 .timeline-header {
     text-align: center;
-    margin-bottom: 60px; /* Crea spazio vuoto sotto i testi per evitare sovrapposizioni */
+    margin-bottom: 60px; 
 }
 
-/* Tipografia d'Impatto in stile Tokyo Post */
 h1 { 
     font-family: 'Space Grotesk', sans-serif;
     font-size: 5rem; 
@@ -95,14 +87,13 @@ h1 {
     letter-spacing: 2px; 
 }
 
-/* Indicatore animato del mouse - Spinto verso il basso in modo fisso e sicuro */
 .scroll-indicator {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     opacity: 0.5;
-    margin-top: auto; /* Lo ancora alla base della sezione senza toccare i testi sopra */
+    margin-top: auto; 
     padding-top: 40px;
 }
 
@@ -127,7 +118,6 @@ h1 {
 
 @keyframes scrollAnim { 0% { opacity: 1; top: 6px; } 100% { opacity: 0; top: 16px; } }
 
-/* Tipografia Principale */
 h1 { 
     font-family: 'Space Grotesk', sans-serif;
     font-size: 4.5rem; 
@@ -179,7 +169,6 @@ h3 {
     letter-spacing: 1.5px; 
 }
 
-/* Indicatore animato del mouse per invitare a scorrere */
 .scroll-indicator {
     position: absolute;
     bottom: 5vh;
@@ -204,9 +193,7 @@ h3 {
 }
 @keyframes scrollAnim { 0% { opacity: 1; top: 6px; } 100% { opacity: 0; top: 18px; } }
 
-/* ==========================================================================
-   STRUTTURA DELLA TIMELINE A SERPENTINA
-   ========================================================================== */
+
 .timeline-container {
     position: relative;
     max-width: 1100px;
@@ -220,13 +207,12 @@ h3 {
     background: linear-gradient(to bottom, #64ffda 0%, #00d4ff 50%, #64ffda 100%);
     box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
     top: 0;
-    bottom: 500px; /* MODIFICATO: Alza il punto di interruzione per non invadere le conclusioni */
+    bottom: 500px; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
 }
 
-/* Struttura a Zig-Zag dei Blocchi */
 .timeline-item {
     position: relative;
     width: 50%;
@@ -237,9 +223,7 @@ h3 {
 .timeline-item.destra { left: 50%; padding-left: 55px; }
 .timeline-item.sinistra { left: 0; padding-right: 55px; text-align: right; }
 
-/* ==========================================================================
-   I RIQUADRI DEL SITO: EFFETTO GLOW GLASSMORMIPSM
-   ========================================================================== */
+
 .blocco-contenuto {
     position: relative;
     background: rgba(255, 255, 255, 0.02);
@@ -268,7 +252,6 @@ h3 {
 
 strong { color: #64ffda; font-weight: 600; }
 
-/* Emoji filigrana 3D interne alla card */
 .watermark-emoji {
     position: absolute;
     font-size: 8rem;
@@ -286,9 +269,6 @@ strong { color: #64ffda; font-weight: 600; }
     transform: scale(1.1) rotate(-5deg);
 }
 
-/* ==========================================================================
-   FOTO REALI DELLE ATTIVITÀ (Nomi esatti dei tuoi file)
-   ========================================================================== */
 .foto-reale-box {
     width: 100%;
     height: 230px;
@@ -309,16 +289,10 @@ strong { color: #64ffda; font-weight: 600; }
 .foto-istruttrice { background-image: url('foto-bambino.jpg'); }
 .foto-codice { background-image: url('algoritmo.jpg'); }
 
-/* ==========================================================================
-   ICONE STILIZZATE DI FIANCO AI RIQUADRI
-   ========================================================================== */
-/* ==========================================================================
-   ICONE STILIZZATE SULLA LINEA CENTRALE (Fix Allineamento)
-   ========================================================================== */
+
 .disegnino-stilizzato {
     position: absolute;
-    font-size: 2.2rem; /* Leggermente più piccole e raffinate per non occupare spazio */
-    top: 50%;
+    font-size: 2.2rem; 
     transform: translateY(-50%);
     z-index: 5;
     background: #0f2440;
@@ -331,7 +305,6 @@ strong { color: #64ffda; font-weight: 600; }
     pointer-events: none;
 }
 
-/* Calcolo esatto per posizionarle millimetricamente sopra la linea centrale */
 .destra .disegnino-stilizzato { left: -55px; }
 .sinistra .disegnino-stilizzato { right: -55px; }
 
@@ -341,9 +314,7 @@ strong { color: #64ffda; font-weight: 600; }
     box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
 }
 
-/* ==========================================================================
-   CHIUSURA FOOTER
-   ========================================================================== */
+
 .timeline-footer {
     margin-top: 60px;
     padding: 60px 40px;
@@ -364,9 +335,7 @@ strong { color: #64ffda; font-weight: 600; }
     font-weight: 300;
 }
 
-/* ==========================================================================
-   ANIMAZIONI E INTERACTION UTILS
-   ========================================================================== */
+
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
@@ -383,7 +352,6 @@ strong { color: #64ffda; font-weight: 600; }
     transform: translateY(30px);
 }
 
-/* Bottone Torna In Cima */
 #backToTop {
     position: fixed;
     bottom: 40px; right: 40px;
@@ -401,15 +369,13 @@ strong { color: #64ffda; font-weight: 600; }
 #backToTop.show { opacity: 1; visibility: visible; }
 #backToTop:hover { transform: translateY(-5px); background: #ffffff; }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN (Ottimizzazione Smartphone)
-   ========================================================================== */
+
 @media (max-width: 850px) {
     .linea-verticale-serpentina { left: 20px; bottom: 260px; }
     .timeline-item { width: 100%; margin-bottom: 70px; }
     .timeline-item.destra { padding-left: 45px; left: 0; }
     .timeline-item.sinistra { padding-right: 0; padding-left: 45px; left: 0; text-align: left; }
-    .disegnino-stilizzato { display: none; } /* Nasconde i cerchi volanti su mobile per pulizia */
+    .disegnino-stilizzato { display: none; } 
     h1 { font-size: 3rem; }
     h2 { font-size: 2.4rem; }
     h3 { font-size: 1.7rem; }
