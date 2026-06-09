@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Attivazione immediata delle animazioni per la Hero Section all'avvio
     const heroElements = document.querySelectorAll('.animate-ready');
     heroElements.forEach((el, index) => {
         setTimeout(() => {
@@ -10,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }, index * 150);
     });
 
-    // 2. Controllo dello scroll per far apparire i blocchi a serpentina
     const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
     
     const observerOptions = {
@@ -30,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 
-    // 3. Gestione della comparsa del pulsante "Torna Su"
     const backToTopButton = document.getElementById('backToTop');
 
     window.addEventListener('scroll', () => {
