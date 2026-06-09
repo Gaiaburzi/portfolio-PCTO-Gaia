@@ -1,15 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. Attivazione immediata delle animazioni per gli elementi visibili all'avvio
-    const header = document.querySelector('.timeline-header');
-    if (header) header.classList.add('visible');
+    // 1. Attivazione immediata delle animazioni per la Hero Section all'avvio
+    const heroElements = document.querySelectorAll('.animate-ready');
+    heroElements.forEach((el, index) => {
+        setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+            el.style.transition = "opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+        }, index * 150);
+    });
 
-    // 2. Controllo dello scroll per far apparire i blocchi a serpentina e le icone
+    // 2. Controllo dello scroll per far apparire i blocchi a serpentina
     const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
     
     const observerOptions = {
         root: null,
-        threshold: 0.10 // Appare appena il blocco entra leggermente nello schermo
+        threshold: 0.12 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -24,11 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 
-    // 3. Gestione della comparsa del pallino "Torna Su"
+    // 3. Gestione della comparsa del pulsante "Torna Su"
     const backToTopButton = document.getElementById('backToTop');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 250) {
+        if (window.scrollY > 400) {
             backToTopButton.classList.add('show');
         } else {
             backToTopButton.classList.remove('show');
