@@ -285,8 +285,8 @@ strong { color: #64ffda; font-weight: 600; }
     filter: grayscale(0%) brightness(100%);
 }
 
-.foto-nuoto { background-image: url('nuoto.jpg'); }
-.foto-istruttrice { background-image: url('foto-bambino.jpg'); }
+.foto-nuoto { background-image: url('nuoto.JPG'); }
+.foto-istruttrice { background-image: url('foto-bambino.JPG'); }
 .foto-codice { background-image: url('algoritmo.jpg'); }
 
 
