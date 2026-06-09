@@ -220,7 +220,7 @@ h3 {
     background: linear-gradient(to bottom, #64ffda 0%, #00d4ff 50%, #64ffda 100%);
     box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
     top: 0;
-    bottom: 300px;
+    bottom: 450px; /* MODIFICATO: Alza il punto di interruzione per non invadere le conclusioni */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
